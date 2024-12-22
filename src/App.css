@@ -202,17 +202,13 @@ padding-top: 30px;;
 
 /*********Cursor******/
 .custom-cursor {
-  cursor: url('/cursor.png'), auto; /* Use the image from the public folder */
+  cursor: url('/cursor.png'), auto; 
 }
-
-/* Apply custom cursor to nav menu */
 .nav-menu {
-  cursor: url('/cursor.png'), auto; /* Custom cursor for the nav menu */
+  cursor: url('/cursor.png'), auto; /
 }
-
-/* Apply custom cursor to each book */
 .each-book {
-  cursor: url('/cursor.png'), auto; /* Custom cursor for each book */
+  cursor: url('/cursor.png'), auto; 
 }
 /******************** Quotes********************/
 .quotes-container{
