@@ -1,3 +1,38 @@
+.fontdiner-swanky-regular {
+  font-family: "Fontdiner Swanky", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.atma-light {
+  font-family: "Atma", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.atma-regular {
+  font-family: "Atma", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.atma-medium {
+  font-family: "Atma", serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.atma-semibold {
+  font-family: "Atma", serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.atma-bold {
+  font-family: "Atma", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
 
 h1,h2{
   text-align:center;
@@ -5,39 +40,66 @@ h1,h2{
 
 h1{
   font-size:55pt;
-  padding-top:10px;
+  font-family: "Fontdiner Swanky", serif;
   padding-bottom:40px;
-  background-color:rgba(163, 216, 255, 0.5);
   width:600px;
   margin: 30px auto;
   border-radius:15px;
-  padding-top:30px
+  padding-top:30px;
+  font-weight: 300;
+  color:#1c5c58;
  
 }
 
 /******************Header*************/
-.nav-menu{
- display: flex;
- gap: 45px;
- font-weight:bold;
+
+
+.nav-menu {
+  display: flex;
+  justify-content: space-around; 
+  align-items: center;  
+  background-color: #c7f1e2 ;
+  padding: 20px;  
+  opacity: 0; 
+  animation: fadeIn 0.5s forwards; 
+  cursor: url('/cursor.png'), auto;
 }
 
-.nav-menu a{
+.nav-menu img {
+  max-width: 100px; 
+  max-height: 50px; 
+}
+
+.nav-menu a {
+  text-decoration: none; 
+  color: black; 
+  cursor: url('/cursor.png'), auto;
+}
+
+.nav-link {
+  color: white;
   text-decoration: none;
-  margin:15px;
-  padding:12px;
+  font-size: 18px;
+  position: relative;
+  transition: color 0.3s ease;
+
 }
 
-.nav-menu a:hover {
-  background-color: #94FFD8;
-  border-radius: 10px
+
+.nav-link img {
+  margin-right: 8px; 
+  transition: transform 0.3s ease; 
 }
+.nav-link:hover img {
+  transform: scale(1.1); 
+}
+
 
 .nav-menu a.active{
   font-weight: bold;
-  background-color:rgba(163, 216, 255, 0.5);
+
   padding: 12px;
-  border-radius: 10px
+ 
 
 }
 .nav-menu a:visited {
@@ -47,6 +109,25 @@ h1{
 .nav-menu a.after{
   color:black;
 }
+
+@keyframes fadeIn {
+  to {
+      opacity: 1; 
+  }
+}
+
+/************************Banner*******************/
+
+.banner {
+  width: 100%;
+  overflow: hidden;
+}
+
+.banner-image {
+  width: 100%;
+  height: auto; 
+}
+
 /******************** HomePage********************/
 .book-container{
   display: grid;
@@ -62,25 +143,84 @@ h1{
   border-radius:4px;
 }
 .each-book{
-  background-color:#94FFD8;
+padding-top: 30px;;
   text-align:center;
-  border-radius:15px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
-
+  font-family: "Atma", serif; 
+  color:#1c5c58;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.each-book:hover {
+  transform: scale(1.05); 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
 }
 .img-book{
   height: auto; 
   border-radius: 8px;
-  max-width:100%;
- 
+  max-width:80%;
+  max-height: 250px;
+  
+}
+/*******Footer******/
+
+.footer {
+  background-color: #c7f1e2; 
+  padding: 20px; 
+  text-align: center; 
+  position: relative; 
+  bottom: 0; 
+  width: 100%; 
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); 
 }
 
+.footer-content {
+  max-width: 1200px; 
+  margin: 0 auto; 
+}
+
+.footer p {
+  margin: 10px 0;
+  font-family: "Atma", serif; 
+  color: #1c5c58; 
+}
+
+.footer-nav {
+  display: flex; 
+  justify-content: center; 
+  gap: 20px; 
+}
+
+.footer-nav a {
+  text-decoration: none; 
+  color: #1c5c58; 
+  font-weight: 500; 
+  transition: color 0.3s ease; 
+}
+
+.footer-nav a:hover {
+  color: #3a8e8b; 
+}
+
+/*********Cursor******/
+.custom-cursor {
+  cursor: url('/cursor.png'), auto; /* Use the image from the public folder */
+}
+
+/* Apply custom cursor to nav menu */
+.nav-menu {
+  cursor: url('/cursor.png'), auto; /* Custom cursor for the nav menu */
+}
+
+/* Apply custom cursor to each book */
+.each-book {
+  cursor: url('/cursor.png'), auto; /* Custom cursor for each book */
+}
 /******************** Quotes********************/
 .quotes-container{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap:35px;
   text-align:center;
+  margin-bottom: 35px;;
 }
 
 .quote{
@@ -101,28 +241,32 @@ h1{
 /******************** Description********************/
 
 .description-container{
-  background-color:#E5E4E2;
   margin: 20px auto;
   display: grid;
   grid-template-columns: 200px 300px;
   justify-content:space-evenly;
   width:800px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
   gap:35px;
   border-radius:15px;
+  align-items: center;
 }
 
 .img-description{
   width:250px;
   height: auto;
-  background-color:#94FFD8;
   padding:20px;
   border-radius:15px;
   margin-top:15px;
   margin-bottom:15px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
 
+.description-container p{
+  color: #153b39; 
+}
+
+.description-container h2{
+  color: #153b39; 
+}
 
 /*******************************Tablet version***************/
 @media (max-width: 768px) {

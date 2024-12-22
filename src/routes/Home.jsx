@@ -21,6 +21,9 @@ export const Home = () => {
 
 return (
  <>
+ <div className="banner">
+                <img src="/Seuss.jpg" alt="Seuss Banner" className="banner-image" />
+            </div>
     <h1>Seuss Treasury</h1>
             <div className='book-container'>
                 {books.map((book) => (
@@ -34,3 +37,4 @@ return (
 </>
 );
 }
+
